@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f8f1;
+  color: #243b2a;
+}
+
+.navbar {
+  background: #174d32;
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navbar h2 {
+  font-size: 25px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-links button {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-links button:hover {
+  color: #b8e986;
+}
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  background:
+    linear-gradient(
+      rgba(13, 50, 28, 0.65),
+      rgba(13, 50, 28, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b")
+    center/cover no-repeat;
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.primary-btn,
+.add-btn,
+.quantity-btn,
+.delete-btn,
+.checkout-btn,
+.continue-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 11px 18px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.primary-btn,
+.add-btn,
+.checkout-btn {
+  background: #247344;
+  color: white;
+}
+
+.primary-btn:hover,
+.add-btn:hover,
+.checkout-btn:hover {
+  background: #15512e;
+}
+
+.add-btn:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+.page-container {
+  padding: 35px 5%;
+  min-height: 65vh;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.category-title {
+  margin: 30px 0 18px;
+  color: #174d32;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.plant-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px #00000012;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.plant-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.plant-card h3 {
+  margin: 15px 8px 8px;
+}
+
+.plant-card p {
+  margin: 8px;
+}
+
+.plant-card .add-btn {
+  margin-top: 8px;
+}
+
+.about-container {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  line-height: 1.9;
+}
+
+.about-container h1,
+.about-container h2 {
+  margin-bottom: 15px;
+  color: #174d32;
+}
+
+.cart-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  margin-bottom: 15px;
+  padding: 18px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.cart-row img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.quantity-btn {
+  background: #dcebdc;
+  color: #174d32;
+}
+
+.delete-btn {
+  background: #c93636;
+  color: white;
+}
+
+.cart-summary {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 25px;
+  text-align: right;
+}
+
+.cart-summary h2 {
+  margin-bottom: 20px;
+}
+
+.cart-summary button {
+  margin: 5px;
+}
+
+.continue-btn {
+  background: #e1eee2;
+  color: #174d32;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-cart h2 {
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #174d32;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  margin-top: 35px;
+}
+
+@media (max-width: 768px) {
+  .plant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .cart-row {
+    justify-content: center;
+    text-align: center;
+  }
+}
